@@ -1,0 +1,79 @@
+/* theme color */
+$--color-primary: teal;
+$bg-primary: #0F2B5B;
+$text-primary: #0F2B5B;
+$bg-secondary: #F77F00;
+$text-secondary: #F77F00;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+body {
+    margin: 0 auto;
+    height: 100%;
+}
+
+.el-header {
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 25;
+}
+
+.slideshow-home {
+    height: 100vh;
+    .image-cover-header {
+        width: 100%;
+    }
+}
+
+.header-top-fixed {
+    position: relative;
+}
+
+.el-footer {
+    color: #ffffff;
+    text-align: center;
+    line-height: 60px;
+}
+
+.el-main {
+    padding: 60px 0 0;
+}
+
+.block-section {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row-margin {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.article-items {
+    // margin-bottom: 2rem;
+    .el-card__body {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .el-button {
+        padding: 0;
+    }
+}
+
+.footer-info {
+    background-color: $bg-secondary;
+}
