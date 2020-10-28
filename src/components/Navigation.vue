@@ -1,7 +1,14 @@
 <template>
     <nav class="header-top-fixed">
         <el-row type="flex" class="row-bg" justify="space-around">
-            <el-col :span="6"><div class="grid-content bg-purple">Ini LOGO</div></el-col>
+            <el-col :span="6">
+                <div class="logo-nav">
+                    <el-button type="text" icon="el-icon-s-unfold" class="menu-left"></el-button>
+                    <router-link to="/">
+                        <img :src="logo" alt="Mandiri Taspen">
+                    </router-link>
+                </div>
+            </el-col>
             <el-col :span="18">
                 <div class="actions-nav-menu">
                     <div class="menu-nav">
@@ -60,6 +67,7 @@ export default {
         return {
             activeindex: '1',
             input2: null,
+            logo: require('../assets/images/Mandiri_Taspen_Logo.png'),
         };
     },
     methods: {

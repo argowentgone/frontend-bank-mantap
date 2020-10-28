@@ -1,5 +1,5 @@
 <template>
-    <div class="login-box">
+    <div class="login-section">
         <el-row type="flex" class="row-bg" justify="center">
             <el-col :span="8">
                 <el-form
@@ -31,8 +31,8 @@ export default {
     data() {
         return {
             loginForm: {
-                email: '',
-                pass: '',
+                email: 'admin@admin.com',
+                pass: '123123123',
             },
             rules: {
                 email: [

@@ -17,7 +17,7 @@ body {
 }
 
 #app {
-    .el-container {
+    .el-container.views {
         .el-header {
             width: 100%;
             padding: 0;
@@ -28,6 +28,23 @@ body {
                 position: relative;
                 padding: 0 3rem;
                 background-color: #ffffff;
+                .menu-left {
+                    color: $bg-primary;
+                    font-size: 1.7rem;
+                }
+                .logo-nav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    height: 100%;
+                    a {
+                        display: inline-block;
+                        margin-left: 15px;
+                        img {
+                            width: 105px;
+                        }
+                    }
+                }
                 .actions-nav-menu {
                     display: flex;
                     flex-wrap: wrap;
@@ -36,6 +53,10 @@ body {
                         padding: 0 5px;
                         .el-menu--horizontal {
                             border: none;
+                            .el-menu-item {
+                                height: 80px;
+                                line-height: 80px;
+                            }
                             .el-menu-item:not(.is-disabled) {
                                 &:hover {
                                     background-color: #FCD116;
@@ -54,6 +75,8 @@ body {
                                     background-color: #FCD116;
                                 }
                                 .el-submenu__title {
+                                    height: 80px;
+                                    line-height: 80px;
                                     &:hover {
                                         background-color: #FCD116;
                                     }
@@ -65,20 +88,22 @@ body {
                         }
                     }
                     .menu-search {
+                        height: 100%;
                         padding: 0 5px;
-                        height: 60px;
-                        line-height: 60px;
+                        height: 80px;
+                        line-height: 80px;
                     }
                     .menu-language {
+                        height: 100%;
                         padding: 0 5px;
-                        height: 60px;
-                        line-height: 60px;
+                        height: 80px;
+                        line-height: 80px;
                     }
                 }
             }
         }
         .el-main {
-            padding: 60px 0 0;
+            padding: 80px 0 0;
             .main-container {
                 .home {
                     .slideshow-home {
@@ -90,6 +115,17 @@ body {
                 }
                 .pinjaman-section {
                     margin: 3rem 0;
+                    .el-row {
+                        margin-bottom: 3rem;
+                        .cover-page-section {
+                            img {
+                                width: 100%;
+                                height: 300px;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+                    }
                 }
                 .simpanan-section {
                     margin: 3rem 0;
@@ -112,11 +148,22 @@ body {
             padding: 0;
         }
     }
-    
+    .dashboard {
+        .el-container {
+            .el-header {}
+            .el-main {}
+            .el-footer {}
+        }
+    }
 }
 
 .sc-launcher {
     z-index: 999;
+}
+.sc-chat-window {
+    &.opened {
+        z-index: 999;
+    }
 }
 
 .el-menu--horizontal {
@@ -163,6 +210,9 @@ body {
     }
 }
 
-.footer-info {
+.footer-menu {
     background-color: $bg-secondary;
+}
+.footer-contact {
+    background-color: $bg-primary;
 }

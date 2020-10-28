@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <el-container>
+    <el-container class="views" v-if="$route.name !== 'Dashboard'">
       <el-header>
         <Navigation />
       </el-header>
@@ -11,9 +11,10 @@
       </el-main>
       <el-footer>
         <Footer />
+        <LiveChat />
       </el-footer>
     </el-container>
-    <LiveChat />
+    <Dashboard v-else />
   </div>
 </template>
 
@@ -31,8 +32,14 @@
 import Navigation from '@/components/Navigation.vue';
 import Footer from '@/components/Footer.vue';
 import LiveChat from '@/components/LiveChat.vue';
+import Dashboard from '@/views/Admin/Dashboard/Dashboard.vue';
 export default {
-  components: { Navigation, Footer, LiveChat },
+  components: { 
+    Navigation,
+    Footer,
+    LiveChat,
+    Dashboard,
+  },
   data() {
     return {
       //
