@@ -1,5 +1,5 @@
 <template>
-  <div class="pinjaman-ritel">
+  <div class="pinjaman-ritel-section">
     <el-row>
       <el-button type="info"><h1>This is an ritel page</h1></el-button>
     </el-row>
@@ -8,6 +8,6 @@
 
 <script>
 export default {
-    name: "Ritel",
+    name: "ritel",
 }
 </script>

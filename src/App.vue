@@ -5,7 +5,9 @@
         <Navigation />
       </el-header>
       <el-main>
-        <router-view/>
+        <div class="main-container">
+          <router-view/>
+        </div>
       </el-main>
       <el-footer>
         <Footer />
@@ -33,8 +35,8 @@ export default {
   components: { Navigation, Footer, LiveChat },
   data() {
     return {
-    //
+      //
     }
-  }
+  },
 }
 </script>

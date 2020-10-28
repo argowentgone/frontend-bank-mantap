@@ -1,5 +1,5 @@
 <template>
-  <div class="pinjaman">
+  <div class="pinjaman-section">
     <el-row>
       <PinjamanPensiun v-if="$route.name === 'Pensiun'" />
       <PinjamanRitel v-if="$route.name === 'Ritel'" />
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: "Pinjaman",
+    name: "pinjaman",
     components: {
         PinjamanPensiun: () => import("@/views/Pinjaman/Pensiun"),
         PinjamanRitel: () => import("@/views/Pinjaman/Ritel"),

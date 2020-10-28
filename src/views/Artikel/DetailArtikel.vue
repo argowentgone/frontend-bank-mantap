@@ -1,5 +1,5 @@
 <template>
-    <div class="articles">
+    <div class="details-artikel">
         <el-row>
             <el-button type="info"><h1>This is an {{title}} page</h1></el-button>
         </el-row>
@@ -8,10 +8,10 @@
 
 <script>
   export default{
-    name:'articles',
+    name:'detail-article',
         data (){
             return{
-                title:'Articles'
+                title:'Detail Artikel'
             }
         }
     }

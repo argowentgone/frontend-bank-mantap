@@ -32,6 +32,16 @@ const routes = [
     ],
   },
   {
+    path: "/simpanan",
+    name: "Simpanan",
+    component: () => import("@/views/Simpanan/Simpanan"),
+  },
+  {
+    path: "/program",
+    name: "Program",
+    component: () => import("@/views/Program/Program"),
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
@@ -42,12 +52,22 @@ const routes = [
     },
   },
   {
-    path: "/articles",
-    name: "Articles",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import("@/views/Articles/Articles"),
+    path: "/artikel",
+    name: "Artikel",
+    component: () => import("@/views/Artikel/Artikel"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("@/views/Admin/Login"),
+  },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: () => import("@/views/Admin/Dashboard/Dashboard"),
+    meta: {
+      requiresAuth: true,
+    },
   },
   { path: "/404", name: "404", component: () => import("@/views/NotFound") },
   { path: "*", redirect: "/404" },

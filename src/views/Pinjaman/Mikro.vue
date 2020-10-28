@@ -1,5 +1,5 @@
 <template>
-  <div class="pinjaman-mikro">
+  <div class="pinjaman-mikro-section">
     <el-row>
       <el-button type="info"><h1>This is an mikro page</h1></el-button>
     </el-row>
@@ -8,6 +8,6 @@
 
 <script>
 export default {
-    name: "Mikro",
+    name: "mikro",
 }
 </script>

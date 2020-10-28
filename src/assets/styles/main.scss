@@ -10,38 +10,127 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 @import "~element-ui/packages/theme-chalk/src/index";
 
+
 body {
     margin: 0 auto;
     height: 100%;
 }
 
-.el-header {
-    width: 100%;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    z-index: 25;
-}
-
-.slideshow-home {
-    height: 100vh;
-    .image-cover-header {
-        width: 100%;
+#app {
+    .el-container {
+        .el-header {
+            width: 100%;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            z-index: 25;
+            .header-top-fixed {
+                position: relative;
+                padding: 0 3rem;
+                background-color: #ffffff;
+                .actions-nav-menu {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                    .menu-nav {
+                        padding: 0 5px;
+                        .el-menu--horizontal {
+                            border: none;
+                            .el-menu-item:not(.is-disabled) {
+                                &:hover {
+                                    background-color: #FCD116;
+                                }
+                            }
+                            .el-menu-item:not(.is-disabled) {
+                                &:focus {
+                                    background-color: #FCD116;
+                                }
+                            }
+                            .el-submenu {
+                                &:hover {
+                                    background-color: #FCD116;
+                                }
+                                &:focus {
+                                    background-color: #FCD116;
+                                }
+                                .el-submenu__title {
+                                    &:hover {
+                                        background-color: #FCD116;
+                                    }
+                                }
+                            }
+                            .el-menu-item.is-active {
+                                border-bottom: 2px solid #FCD116;
+                            }
+                        }
+                    }
+                    .menu-search {
+                        padding: 0 5px;
+                        height: 60px;
+                        line-height: 60px;
+                    }
+                    .menu-language {
+                        padding: 0 5px;
+                        height: 60px;
+                        line-height: 60px;
+                    }
+                }
+            }
+        }
+        .el-main {
+            padding: 60px 0 0;
+            .main-container {
+                .home {
+                    .slideshow-home {
+                        height: 100vh;
+                        .image-cover-header {
+                            width: 100%;
+                        }
+                    }
+                }
+                .pinjaman-section {
+                    margin: 3rem 0;
+                }
+                .simpanan-section {
+                    margin: 3rem 0;
+                }
+                .program-section {
+                    margin: 3rem 0;
+                }
+                .artikel-section {
+                    margin: 3rem 0;
+                }
+                .login-section {
+                    margin: 3rem 0;
+                }
+            }
+        }
+        .el-footer {
+            color: #ffffff;
+            text-align: center;
+            line-height: 60px;
+            padding: 0;
+        }
     }
+    
 }
 
-.header-top-fixed {
-    position: relative;
+.sc-launcher {
+    z-index: 999;
 }
 
-.el-footer {
-    color: #ffffff;
-    text-align: center;
-    line-height: 60px;
+.el-menu--horizontal {
+    width: 100%;
+    left: 0 !important;
 }
-
-.el-main {
-    padding: 60px 0 0;
+.menu-nav-custom-items {
+    background-color: #ffffff;
+    .el-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem 0;
+    }
 }
 
 .block-section {
