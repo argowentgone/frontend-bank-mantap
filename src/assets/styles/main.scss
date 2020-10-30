@@ -150,6 +150,13 @@ body {
     }
     .dashboard {
         .el-container {
+            .el-aside {
+                .el-menu {
+                    .el-submenu {
+                        text-align: left;
+                    }
+                }
+            }
             .el-header {}
             .el-main {}
             .el-footer {}
@@ -215,4 +222,8 @@ body {
 }
 .footer-contact {
     background-color: $bg-primary;
+}
+
+.row-form {
+    margin-bottom: 22px;
 }

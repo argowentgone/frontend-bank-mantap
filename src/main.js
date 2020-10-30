@@ -8,10 +8,12 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import Chat from "vue-beautiful-chat";
+import CKEditor from '@ckeditor/ckeditor5-vue';
 
 Vue.config.productionTip = false;
 
 Vue.use(Chat);
+Vue.use(CKEditor);
 
 Vue.use(ElementUI, { locale });
 

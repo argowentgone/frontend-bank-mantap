@@ -50,6 +50,7 @@ export default {
             this.$refs[formName].validate((valid) => {
                 if (valid) {
                     alert('submit!');
+                    this.$store.dispatch("login", this.loginForm.email)
                     this.$router.push('dashboard');
                 } else {
                     console.log('error submit!!');
