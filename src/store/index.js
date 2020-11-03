@@ -21,6 +21,12 @@ export default new Vuex.Store({
     setDataPagePinjamanPensiun(state, newPage) {
 			state.page.pinjaman.pensiun = newPage;
     },
+    setDataPagePinjamanRitel(state, newPage) {
+      state.page.pinjaman.ritel = newPage;
+    },
+    setDataPagePinjamanMikro(state, newPage) {
+      state.page.pinjaman.mikro = newPage;
+    },
     logout(state) {
       state.user = null;
     },

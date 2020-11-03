@@ -20,11 +20,11 @@
                     </el-menu-item>
                 </el-submenu>
                 <el-submenu index="2">
-                    <template slot="title"><i class="el-icon-menu"></i>Artikel</template>
+                    <template slot="title"><i class="el-icon-news"></i>Artikel</template>
                     <el-menu-item index="2-1">List</el-menu-item>
                 </el-submenu>
                 <el-submenu index="3">
-                    <template slot="title"><i class="el-icon-setting"></i>Events</template>
+                    <template slot="title"><i class="el-icon-notebook-1"></i>Events</template>
                     <el-menu-item index="3-1">List</el-menu-item>
                 </el-submenu>
                 </el-menu>
@@ -32,13 +32,11 @@
             
             <el-container>
                 <el-header style="text-align: right; font-size: 12px">
-                    <span>{{$store.state.user}}</span>
+                    <span style="margin-right: 7px;">{{$store.state.user}}</span>
                     <el-dropdown>
                         <i class="el-icon-setting" style="margin-right: 15px"></i>
                         <el-dropdown-menu slot="dropdown">
-                            <el-dropdown-item>View</el-dropdown-item>
-                            <el-dropdown-item>Add</el-dropdown-item>
-                            <el-dropdown-item>Delete</el-dropdown-item>
+                            <el-dropdown-item>Settings</el-dropdown-item>
                             <el-dropdown-item>
                                 <el-button type="text" @click="logoutHandler">Logout</el-button>
                             </el-dropdown-item>

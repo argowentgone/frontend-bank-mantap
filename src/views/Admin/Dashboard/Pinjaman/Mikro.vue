@@ -47,6 +47,7 @@ export default {
                 coverImage: null,
                 editor: null
             },
+            fullscreenLoading: false,
         }
     },
     mounted() {
@@ -58,7 +59,20 @@ export default {
     methods: {
         onSubmit() {
             console.log('submit!');
-            this.$store.commit("setDataPagePinjamanmikro", this.editorData);
+            const loading = this.$loading({
+                lock: true,
+                text: 'Loading',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)'
+            });
+            this.$store.commit("setDataPagePinjamanMikro", this.editorData);
+            setTimeout(() => {
+                loading.close();
+                this.$message({
+                    message: 'Congrats, page Mikro has been saved.',
+                    type: 'success'
+                });
+            }, 2000);
             console.log(this.$store.state);
         },
         handleRemove(file, fileList) {
